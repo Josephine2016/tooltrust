@@ -1,0 +1,35 @@
+TO COPY INTO YOUTUBE — DESCRIPTION FIELD
+==========================================
+TITLE: ToolTrust — Verified Repair Tools for Computer Village, Ikeja | WarriorHacks 2.0 Demo (2 min)
+
+DESCRIPTION:
+Fake tools are eating technicians' money in Computer Village — the Standard Organisation of Nigeria says up to 80% of gadgets sold there may be fake, and a "₦40,000 original" hot-air station two streets away costs ₦55,000. Nobody can verify anything before they pay.
+
+ToolTrust is a mobile web app built WITH and FOR the repair technicians of Ikeja, Lagos:
+✅ Browse verified, price-transparent tools (₦, no wahala)
+🔍 Check any tool's batch code before you pay — genuine, invalid, or not-in-registry, in 30 seconds
+📲 Order in one tap — lands on the supplier's WhatsApp, the way this market already works
+🚩 Report counterfeit stalls and warn the community
+
+Built for WarriorHacks 2.0 (theme: solve an issue in your community) — Hackathon Track. Zero backend, works offline on any Android, demo codes below ⬇️
+
+🕒 TIMESTAMPS
+0:00 The problem in Computer Village
+0:25 What technicians told us (empathy interviews)
+0:50 Verify a real code vs a fake code
+1:20 Order via WhatsApp in one tap
+1:40 Community counterfeit reports
+2:00 Roadmap: escrow payments, Onitsha & Abuja markets
+
+🧪 TRY IT YOURSELF
+Genuine code: TT-38IN-2210 | Fake code: TT-38IN-9999
+Live demo: [YOUR GITHUB PAGES LINK]
+GitHub: [YOUR GITHUB REPO LINK]
+Hackathon: WarriorHacks 2.0 by Westwood CS Club — https://warriorhacks-2-0.devpost.com
+
+Built with 💚 in Lagos, Nigeria 🇳🇬
+
+#WarriorHacks #Hackathon #ComputerVillage #Ikeja #Lagos #NigeriaTech #RepairTools #Counterfeit #AIforGood #StudentDeveloper
+
+TAGS (YouTube tags field):
+tooltrust, warriorhacks 2.0, hackathon project, computer village ikeja, phone repair nigeria, counterfeit tools, lagos tech, student hackathon, whatsapp business nigeria, repair technician

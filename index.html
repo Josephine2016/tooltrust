@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<!-- saved from url=(0048)file:///C:/Users/USER/Downloads/index%20(1).html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ToolTrust — Verified Repair-Tools Sourcing for Computer Village</title>
+<meta name="description" content="Helping phone &amp; computer repair technicians in Computer Village, Ikeja source genuine tools at fair prices, verify authenticity, and order in minutes over WhatsApp.">
+<style>
+  :root{
+    --bg:#0b1020; --card:#141b33; --card2:#1a2342; --ink:#eef2ff; --muted:#93a0c4;
+    --green:#22c55e; --green-d:#15803d; --gold:#fbbf24; --red:#ef4444; --blue:#60a5fa;
+    --radius:16px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--ink);max-width:480px;margin:0 auto;min-height:100vh;padding-bottom:84px}
+  header{position:sticky;top:0;z-index:20;background:rgba(11,16,32,.92);backdrop-filter:blur(8px);padding:14px 16px;border-bottom:1px solid #232c4d;display:flex;align-items:center;gap:10px}
+  .logo{width:38px;height:38px;border-radius:12px;background:linear-gradient(135deg,var(--green),#0ea5e9);display:grid;place-items:center;font-weight:800;color:#06250f;font-size:18px}
+  header h1{font-size:17px;letter-spacing:.2px}
+  header p{font-size:11px;color:var(--muted)}
+  main{padding:16px}
+  .page{display:none;animation:fade .25s ease}
+  .page.active{display:block}
+  @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+  .card{background:var(--card);border:1px solid #232c4d;border-radius:var(--radius);padding:16px;margin-bottom:14px}
+  h2{font-size:18px;margin-bottom:8px}
+  h3{font-size:15px;margin:10px 0 6px}
+  p,li{font-size:13.5px;color:var(--muted);line-height:1.55}
+  .hero{background:linear-gradient(160deg,#123a2a 0%,var(--card) 60%);border:1px solid #1f4d38}
+  .hero h2{font-size:21px;color:#eafff2}
+  .hero p{color:#b7d9c4;margin-top:6px}
+  .badge{display:inline-block;font-size:10.5px;font-weight:700;padding:3px 9px;border-radius:99px;letter-spacing:.4px}
+  .b-green{background:rgba(34,197,94,.15);color:#4ade80;border:1px solid rgba(34,197,94,.4)}
+  .b-gold{background:rgba(251,191,36,.13);color:#fcd34d;border:1px solid rgba(251,191,36,.4)}
+  .b-red{background:rgba(239,68,68,.13);color:#fca5a5;border:1px solid rgba(239,68,68,.4)}
+  .b-blue{background:rgba(96,165,250,.13);color:#93c5fd;border:1px solid rgba(96,165,250,.4)}
+  .stat-row{display:flex;gap:10px;margin-top:12px}
+  .stat{flex:1;background:rgba(0,0,0,.25);border-radius:12px;padding:10px;text-align:center}
+  .stat b{display:block;font-size:17px;color:#fff}
+  .stat span{font-size:10.5px;color:var(--muted)}
+  .tool{display:flex;gap:12px;align-items:center;background:var(--card);border:1px solid #232c4d;border-radius:var(--radius);padding:12px;margin-bottom:10px}
+  .tool .ic{width:46px;height:46px;border-radius:12px;background:var(--card2);display:grid;place-items:center;font-size:22px;flex-shrink:0}
+  .tool .info{flex:1;min-width:0}
+  .tool .info b{font-size:13.5px;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .tool .info small{font-size:11px;color:var(--muted)}
+  .price{font-weight:800;color:var(--green);font-size:14px;white-space:nowrap}
+  button{cursor:pointer;border:none;border-radius:12px;font-weight:700;font-family:inherit}
+  .btn{background:var(--green);color:#052e12;padding:9px 14px;font-size:12.5px}
+  .btn:active{transform:scale(.97)}
+  .btn-ghost{background:transparent;border:1px solid #33406b;color:var(--ink);padding:8px 13px;font-size:12.5px}
+  .btn-red{background:var(--red);color:#fff;padding:9px 14px;font-size:12.5px}
+  .btn-block{width:100%;padding:14px;font-size:14.5px;margin-top:6px}
+  input,select,textarea{width:100%;background:#0e1530;border:1px solid #2a3560;border-radius:12px;color:var(--ink);padding:12px;font-size:13.5px;font-family:inherit;margin-bottom:10px}
+  input:focus,select:focus,textarea:focus{outline:none;border-color:var(--green)}
+  label{font-size:12px;color:var(--muted);display:block;margin-bottom:4px;font-weight:600}
+  .searchbar{display:flex;gap:8px;margin-bottom:12px}
+  .searchbar input{margin-bottom:0}
+  .chips{display:flex;gap:8px;overflow-x:auto;padding-bottom:8px;margin-bottom:8px;scrollbar-width:none}
+  .chips::-webkit-scrollbar{display:none}
+  .chip{flex-shrink:0;background:var(--card2);border:1px solid #2a3560;color:var(--muted);padding:7px 13px;border-radius:99px;font-size:12px;font-weight:600}
+  .chip.on{background:var(--green);color:#052e12;border-color:var(--green)}
+  nav{position:fixed;bottom:0;left:0;right:0;max-width:480px;margin:0 auto;background:#0e1530;border-top:1px solid #232c4d;display:flex;z-index:30}
+  nav button{flex:1;background:none;color:var(--muted);padding:10px 4px 12px;font-size:10.5px;font-weight:600;display:flex;flex-direction:column;align-items:center;gap:3px}
+  nav button .ico{font-size:19px}
+  nav button.on{color:var(--green)}
+  .verify-result{border-radius:12px;padding:14px;margin-top:10px;display:none}
+  .verify-result.ok{display:block;background:rgba(34,197,94,.1);border:1px solid rgba(34,197,94,.5)}
+  .verify-result.bad{display:block;background:rgba(239,68,68,.1);border:1px solid rgba(239,68,68,.5)}
+  .req{background:var(--card2);border:1px solid #232c4d;border-radius:12px;padding:12px;margin-bottom:10px}
+  .req b{font-size:13px}
+  .req small{color:var(--muted);display:block;margin-top:3px;font-size:11.5px}
+  .step{display:flex;gap:12px;margin-bottom:14px}
+  .step .n{width:28px;height:28px;border-radius:50%;background:var(--green);color:#052e12;font-weight:800;display:grid;place-items:center;font-size:13px;flex-shrink:0}
+  .empathy{border-left:3px solid var(--gold);padding-left:12px;margin:10px 0}
+  .empathy p{color:#d9c58a;font-style:italic;font-size:13px}
+  .empathy small{color:var(--muted);font-size:11px}
+  .toast{position:fixed;bottom:92px;left:50%;transform:translateX(-50%);background:var(--green);color:#052e12;padding:11px 18px;border-radius:99px;font-weight:700;font-size:13px;display:none;z-index:50;box-shadow:0 8px 24px rgba(0,0,0,.5)}
+  .qty{display:flex;align-items:center;gap:8px}
+  .qty button{width:26px;height:26px;border-radius:8px;background:var(--card2);border:1px solid #33406b;color:var(--ink);font-size:14px}
+  .row-between{display:flex;justify-content:space-between;align-items:center;gap:8px}
+  .total-line{display:flex;justify-content:space-between;font-size:14px;margin-top:8px}
+  .total-line b{color:#fff}
+  .cart-item{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px dashed #2a3560;font-size:13px}
+  .empty{text-align:center;padding:30px 10px;color:var(--muted);font-size:13px}
+  .verified-check{color:var(--green);font-weight:700;font-size:11px}
+  details summary{cursor:pointer;font-size:13px;color:var(--blue);font-weight:600}
+  details p{margin-top:6px}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">TT</div>
+  <div>
+    <h1>ToolTrust</h1>
+    <p>Verified tools. Fair prices. Computer Village, Ikeja.</p>
+  </div>
+</header>
+
+<main>
+  <!-- HOME -->
+  <section class="page active" id="page-home">
+    <div class="card hero">
+      <span class="badge b-green">🏆 WarriorHacks 2.0 — Hackathon Track</span>
+      <h2 style="margin-top:8px">Real tools. Real trust. Real community.</h2>
+      <p>Thousands of repair technicians around Computer Village lose money and customers to counterfeit screwdrivers, fake OLED screens and "original" solder that isn't. ToolTrust is a sourcing &amp; verification app built with — and for — the technicians of Ikeja.</p>
+      <div class="stat-row">
+        <div class="stat"><b>80%</b><span>of gadgets at Computer Village flagged fake by SON*</span></div>
+        <div class="stat"><b>₦11m+</b><span>annual tools trade around our pilot hub</span></div>
+        <div class="stat"><b>0</b><span>receipts needed — orders land on WhatsApp</span></div>
+      </div>
+      <p style="font-size:10px;margin-top:10px">*Standard Organisation of Nigeria claim, widely reported; shop owners dispute the figure. Either way, counterfeits are a mass problem.</p>
+    </div>
+
+    <div class="card">
+      <h2>We started with empathy, not solutions 👂</h2>
+      <p>Before writing a line of code we interviewed technicians, stall owners and shoppers in Computer Village. Three voices kept coming back:</p>
+      <div class="empathy"><p>"I bought a 'original' screwdriver set. The tips rounded off in one week. ₦9,500 gone."</p><small>— Phone repair tech, Ola-Ayeni street, Ikeja</small></div>
+      <div class="empathy"><p>"The same hot-air station is ₦40,000 in one shop and ₦55,000 two streets away. Who is cheating who?"</p><small>— Laptop repair tech &amp; new shop owner</small></div>
+      <div class="empathy"><p>"When my tool fails mid-repair, the customer blames me, not the tool. I lose the customer."</p><small>— Motherboard-level technician, 7 yrs experience</small></div>
+    </div>
+
+    <div class="card">
+      <h2>Root problem, not symptoms 🌱</h2>
+      <p><b style="color:#fff">Symptom:</b> technicians buy bad tools.<br><b style="color:#fff">Root problem:</b> the market has <b style="color:#fff">no trusted way to verify authenticity or compare prices</b> before money changes hands. Trust is personal ("my guy"), not verifiable — so fakes thrive and newcomers get exploited.</p>
+      <h3>Our testable problem statement</h3>
+      <p style="color:#fff;background:#0e1530;border-radius:10px;padding:10px;font-size:12.5px">
+      <b>P1:</b> Technicians cannot confirm a tool is genuine <i>before</i> purchase.<br>
+      <b>P2:</b> Tool prices for identical items vary up to ~35% within the same market with no reference point.<br>
+      <b>P3:</b> Restocking requires physically walking stalls — 2–4 hours lost per restock trip.</p>
+    </div>
+
+    <div class="card">
+      <h2>How ToolTrust works ⚙️</h2>
+      <div class="step"><div class="n">1</div><p><b style="color:#fff">Browse</b> a catalog of verified suppliers and genuine-grade tools with transparent prices.</p></div>
+      <div class="step"><div class="n">2</div><p><b style="color:#fff">Verify</b> any tool's batch code against the supplier registry before you pay.</p></div>
+      <div class="step"><div class="n">3</div><p><b style="color:#fff">Order</b> in one tap — the request opens in WhatsApp, the way this community already does business.</p></div>
+      <div class="step"><div class="n">4</div><p><b style="color:#fff">Report</b> counterfeits to warn the community and pressure suppliers.</p></div>
+      <button class="btn btn-block" onclick="go('catalog')">🛒 Browse verified tools</button>
+      <button class="btn-ghost btn-block" onclick="go('verify')">🔍 Verify a tool code</button>
+    </div>
+
+    <div class="card">
+      <h2>Why we can win 🏆</h2>
+      <p><b style="color:#fff">Impact:</b> solves a documented, local, livelihood-threatening problem.<br>
+      <b style="color:#fff">Feasibility:</b> zero-infrastructure MVP — works on any phone browser, offline catalog, WhatsApp rails the market already uses.<br>
+      <b style="color:#fff">UX:</b> mobile-first, low-literacy friendly, big tap targets, naira pricing.<br>
+      <b style="color:#fff">Technical craft:</b> deterministic batch-code verification, local-first data, clean component architecture.</p>
+    </div>
+  </section>
+
+  <!-- CATALOG -->
+  <section class="page" id="page-catalog">
+    <div class="searchbar">
+      <input id="search" placeholder="Search tools… e.g. soldering" oninput="renderCatalog()">
+      <button class="btn" onclick="go('cart')">🧺 <span id="cartCount">0</span></button>
+    </div>
+    <div class="chips" id="chips"><button class="chip on" onclick="setCat('All')">All</button><button class="chip " onclick="setCat('Opening &amp; Precision')">Opening &amp; Precision</button><button class="chip " onclick="setCat('ESD Safety')">ESD Safety</button><button class="chip " onclick="setCat('Soldering &amp; Rework')">Soldering &amp; Rework</button><button class="chip " onclick="setCat('Testing &amp; Measurement')">Testing &amp; Measurement</button><button class="chip " onclick="setCat('Consumables')">Consumables</button></div>
+    <div id="catalogList"><div class="tool">
+      <div class="ic">🪛</div>
+      <div class="info">
+        <b>Precision Screwdriver Set 38-in-1</b>
+        <small>Nhora Tools Ltd · ⭐4.9 · <span class="verified-check">✓ OEM · TT-38IN-2210</span></small>
+        <span class="price">₦12,500</span>
+      </div>
+      <button class="btn" onclick="addToCart(1)">+ Add</button>
+    </div><div class="tool">
+      <div class="ic">⚡</div>
+      <div class="info">
+        <b>Anti-Static Work Mat 30×40cm</b>
+        <small>Nhora Tools Ltd · ⭐4.9 · <span class="verified-check">✓ OEM · TT-ESDM-2341</span></small>
+        <span class="price">₦9,800</span>
+      </div>
+      <button class="btn" onclick="addToCart(2)">+ Add</button>
+    </div><div class="tool">
+      <div class="ic">🔥</div>
+      <div class="info">
+        <b>Digital Soldering Station 60W</b>
+        <small>De-Genuine Tech Supplies · ⭐4.7 · <span class="verified-check">✓ Original · TT-SOL6-2269</span></small>
+        <span class="price">₦28,000</span>
+      </div>
+      <button class="btn" onclick="addToCart(3)">+ Add</button>
+    </div><div class="tool">
+      <div class="ic">💨</div>
+      <div class="info">
+        <b>Hot Air Rework Station 858D</b>
+        <small>De-Genuine Tech Supplies · ⭐4.7 · <span class="verified-check">✓ Original · TT-HOTA-2342</span></small>
+        <span class="price">₦45,500</span>
+      </div>
+      <button class="btn" onclick="addToCart(4)">+ Add</button>
+    </div><div class="tool">
+      <div class="ic">📟</div>
+      <div class="info">
+        <b>Digital Multimeter DT-9205A</b>
+        <small>Ogudu Parts House · ⭐4.5 · <span class="verified-check">✓ OEM · TT-DT92-2125</span></small>
+        <span class="price">₦7,200</span>
+      </div>
+      <button class="btn" onclick="addToCart(5)">+ Add</button>
+    </div><div class="tool">
+      <div class="ic">🔋</div>
+      <div class="info">
+        <b>Battery Health Tester (iOS/Android)</b>
+        <small>De-Genuine Tech Supplies · ⭐4.7 · <span class="verified-check">✓ Original · TT-BATT-2382</span></small>
+        <span class="price">₦15,000</span>
+      </div>
+      <button class="btn" onclick="addToCart(6)">+ Add</button>
+    </div><div class="tool">
+      <div class="ic">🖥️</div>
+      <div class="info">
+        <b>LCD Screen Separator Machine</b>
+        <small>Ogudu Parts House · ⭐4.5 · <span class="verified-check">✓ Original · TT-LCDS-2334</span></small>
+        <span class="price">₦38,000</span>
+      </div>
+      <button class="btn" onclick="addToCart(7)">+ Add</button>
+    </div><div class="tool">
+      <div class="ic">💡</div>
+      <div class="info">
+        <b>UV Curing Lamp (LOCA glue)</b>
+        <small>Nhora Tools Ltd · ⭐4.9 · <span class="verified-check">✓ OEM · TT-UVLC-2381</span></small>
+        <span class="price">₦11,500</span>
+      </div>
+      <button class="btn" onclick="addToCart(8)">+ Add</button>
+    </div><div class="tool">
+      <div class="ic">🩹</div>
+      <div class="info">
+        <b>B-7000 Adhesive 50ml</b>
+        <small>Nhora Tools Ltd · ⭐4.9 · <span class="verified-check">✓ OEM · TT-B7K0-2081</span></small>
+        <span class="price">₦3,800</span>
+      </div>
+      <button class="btn" onclick="addToCart(9)">+ Add</button>
+    </div><div class="tool">
+      <div class="ic">🧴</div>
+      <div class="info">
+        <b>Isopropyl Alcohol 99% (1L)</b>
+        <small>De-Genuine Tech Supplies · ⭐4.7 · <span class="verified-check">✓ OEM · TT-IPA9-2206</span></small>
+        <span class="price">₦5,500</span>
+      </div>
+      <button class="btn" onclick="addToCart(10)">+ Add</button>
+    </div><div class="tool">
+      <div class="ic">🤏</div>
+      <div class="info">
+        <b>ESD Tweezers Set (6 pcs)</b>
+        <small>Nhora Tools Ltd · ⭐4.9 · <span class="verified-check">✓ OEM · TT-TWZR-2542</span></small>
+        <span class="price">₦6,900</span>
+      </div>
+      <button class="btn" onclick="addToCart(11)">+ Add</button>
+    </div><div class="tool">
+      <div class="ic">🛠️</div>
+      <div class="info">
+        <b>Spudger &amp; Opening Picks (10 pcs)</b>
+        <small>Ogudu Parts House · ⭐4.5 · <span class="verified-check">✓ OEM · TT-SPDG-2335</span></small>
+        <span class="price">₦4,200</span>
+      </div>
+      <button class="btn" onclick="addToCart(12)">+ Add</button>
+    </div><div class="tool">
+      <div class="ic">🔌</div>
+      <div class="info">
+        <b>DC Bench Power Supply 30V/10A</b>
+        <small>De-Genuine Tech Supplies · ⭐4.7 · <span class="verified-check">✓ Original · TT-DCPS-2370</span></small>
+        <span class="price">₦32,000</span>
+      </div>
+      <button class="btn" onclick="addToCart(13)">+ Add</button>
+    </div><div class="tool">
+      <div class="ic">🔎</div>
+      <div class="info">
+        <b>USB Amp/Volt Meter Tester</b>
+        <small>Ogudu Parts House · ⭐4.5 · <span class="verified-check">✓ OEM · TT-USBT-2421</span></small>
+        <span class="price">₦5,000</span>
+      </div>
+      <button class="btn" onclick="addToCart(14)">+ Add</button>
+    </div><div class="tool">
+      <div class="ic">🧲</div>
+      <div class="info">
+        <b>Magnetic Project Mat (screw keeper)</b>
+        <small>Nhora Tools Ltd · ⭐4.9 · <span class="verified-check">✓ OEM · TT-MAGM-2308</span></small>
+        <span class="price">₦8,500</span>
+      </div>
+      <button class="btn" onclick="addToCart(15)">+ Add</button>
+    </div><div class="tool">
+      <div class="ic">🌀</div>
+      <div class="info">
+        <b>Desoldering Pump + Braid Kit</b>
+        <small>De-Genuine Tech Supplies · ⭐4.7 · <span class="verified-check">✓ OEM · TT-DESO-2369</span></small>
+        <span class="price">₦7,800</span>
+      </div>
+      <button class="btn" onclick="addToCart(16)">+ Add</button>
+    </div><div class="tool">
+      <div class="ic">❄️</div>
+      <div class="info">
+        <b>Thermal Paste 20g (high-grade)</b>
+        <small>Nhora Tools Ltd · ⭐4.9 · <span class="verified-check">✓ Original · TT-THRM-2412</span></small>
+        <span class="price">₦4,500</span>
+      </div>
+      <button class="btn" onclick="addToCart(17)">+ Add</button>
+    </div><div class="tool">
+      <div class="ic">🌊</div>
+      <div class="info">
+        <b>Ultrasonic Cleaner 0.8L (board wash)</b>
+        <small>Ogudu Parts House · ⭐4.5 · <span class="verified-check">✓ Original · TT-ULTR-2471</span></small>
+        <span class="price">₦52,000</span>
+      </div>
+      <button class="btn" onclick="addToCart(18)">+ Add</button>
+    </div></div>
+  </section>
+
+  <!-- VERIFY -->
+  <section class="page" id="page-verify">
+    <div class="card">
+      <h2>🔍 Authenticity checker</h2>
+      <p>Every genuine tool in the ToolTrust network carries a batch code like <b style="color:#fff">TT-38IN-2210</b>. Enter it before you pay. If it isn't in the registry — walk away.</p>
+      <label for="vcode">Tool batch code</label>
+      <input id="vcode" placeholder="TT-XXXX-NNNN" style="text-transform:uppercase">
+      <button class="btn btn-block" onclick="verifyCode()">Verify now</button>
+      <div class="verify-result" id="vResult"></div>
+      <details style="margin-top:12px"><summary>Try demo codes</summary>
+        <p>✅ Genuine: <b style="color:#fff">TT-38IN-2210</b> · <b style="color:#fff">TT-HOTA-2342</b> · <b style="color:#fff">TT-DT92-2125</b><br>
+        ❌ Flagged: <b style="color:#fff">TT-38IN-9999</b> (wrong checksum) · <b style="color:#fff">ABC123</b> (not in registry)</p>
+      </details>
+    </div>
+    <div class="card">
+      <h2>Why verification matters</h2>
+      <p>Counterfeit tools fail mid-repair, damage customer devices and destroy a technician's reputation. A 10-second check before payment shifts power back to the buyer.</p>
+    </div>
+  </section>
+
+  <!-- CART / RFQ -->
+  <section class="page" id="page-cart">
+    <div class="card">
+      <h2>🧺 Restock request</h2>
+      <div id="cartItems"></div>
+      <div class="total-line"><span>Total estimate</span><b id="cartTotal">₦0</b></div>
+      <label for="techName" style="margin-top:8px">Your name / shop</label>
+      <input id="techName" placeholder="e.g. Emeka — FixLine Repairs, Ola-Ayeni">
+      <button class="btn btn-block" onclick="sendWhatsApp()">📲 Send order via WhatsApp</button>
+      <p style="font-size:11px;margin-top:8px">Opens WhatsApp with your order pre-typed to the supplier — the same channel technicians already use, minus the walking around.</p>
+    </div>
+  </section>
+
+  <!-- REQUESTS -->
+  <section class="page" id="page-requests">
+    <div class="card">
+      <h2>📦 My requests</h2>
+      <div id="reqList"><div class="empty">No requests yet. Place your first restock order from the Tools tab.</div></div>
+    </div>
+  </section>
+
+  <!-- REPORT -->
+  <section class="page" id="page-report">
+    <div class="card">
+      <h2>🚩 Report a counterfeit</h2>
+      <p>Community reports pressure suppliers and warn other technicians. Reports are reviewed before a supplier's trust score drops.</p>
+      <label for="rSupplier">Supplier / stall name</label>
+      <input id="rSupplier" placeholder="e.g. Shop B12, Ogunlana street">
+      <label for="rItem">Fake item description</label>
+      <textarea id="rItem" rows="2" placeholder="e.g. 'Original' LCD sold as OEM, failed in 3 days"></textarea>
+      <button class="btn-red btn-block" onclick="submitReport()">Submit report</button>
+      <div id="reportThanks" style="display:none;margin-top:12px" class="verify-result ok">
+        <b>✅ Report received.</b><p style="margin-top:4px">Thank you for protecting the community. This stall has been flagged for review.</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="row-between"><h2>⚠️ Community flags</h2><span class="badge b-red" id="flagCount">2 reports</span></div>
+      <div id="reportList"><div class="req"><b>Unnamed street vendor (no shop)</b><small>'Original' OLED screen — Grade C copy sold as OEM</small><small>🕒 2 days ago</small></div><div class="req"><b>Stall B12, Ogunlana St</b><small>Fake Yihua soldering iron with copied branding</small><small>🕒 5 days ago</small></div></div>
+    </div>
+    <div class="card">
+      <h2>🏪 Verified suppliers</h2>
+      <div id="supplierList"><div class="req"><div class="row-between"><b>Nhora Tools Ltd</b><span class="badge b-green">✓ Verified</span></div><small>Ola-Ayeni Dr, Ikeja · Trust ⭐ 4.9</small></div><div class="req"><div class="row-between"><b>De-Genuine Tech Supplies</b><span class="badge b-green">✓ Verified</span></div><small>Adelabu plaza, Ojo-Ade · Trust ⭐ 4.7</small></div><div class="req"><div class="row-between"><b>Ogudu Parts House</b><span class="badge b-green">✓ Verified</span></div><small>Kodesho St, Ikeja · Trust ⭐ 4.5</small></div></div>
+    </div>
+  </section>
+</main>
+
+<nav>
+  <button class="on" data-p="home" onclick="go('home')"><span class="ico">🏠</span>Home</button>
+  <button data-p="catalog" onclick="go('catalog')" class=""><span class="ico">🛒</span>Tools</button>
+  <button data-p="verify" onclick="go('verify')" class=""><span class="ico">🔍</span>Verify</button>
+  <button data-p="requests" onclick="go('requests')" class=""><span class="ico">📦</span>Orders</button>
+  <button data-p="report" onclick="go('report')" class=""><span class="ico">🚩</span>Report</button>
+</nav>
+
+<div class="toast" id="toast"></div>
+
+<script>
+/* ============ DATA ============ */
+const SUPPLIERS = {
+  nhora:{name:"Nhora Tools Ltd", loc:"Ola-Ayeni Dr, Ikeja", trust:4.9, verified:true},
+  degen:{name:"De-Genuine Tech Supplies", loc:"Adelabu plaza, Ojo-Ade", trust:4.7, verified:true},
+  ogudu:{name:"Ogudu Parts House", loc:"Kodesho St, Ikeja", trust:4.5, verified:true}
+};
+
+const PRODUCTS = [
+ {id:1, ic:"🪛", name:"Precision Screwdriver Set 38-in-1", cat:"Opening & Precision", price:12500, sup:"nhora", grade:"OEM", code:"TT-38IN-2210"},
+ {id:2, ic:"⚡", name:"Anti-Static Work Mat 30×40cm", cat:"ESD Safety", price:9800, sup:"nhora", grade:"OEM", code:"TT-ESDM-2341"},
+ {id:3, ic:"🔥", name:"Digital Soldering Station 60W", cat:"Soldering & Rework", price:28000, sup:"degen", grade:"Original", code:"TT-SOL6-2269"},
+ {id:4, ic:"💨", name:"Hot Air Rework Station 858D", cat:"Soldering & Rework", price:45500, sup:"degen", grade:"Original", code:"TT-HOTA-2342"},
+ {id:5, ic:"📟", name:"Digital Multimeter DT-9205A", cat:"Testing & Measurement", price:7200, sup:"ogudu", grade:"OEM", code:"TT-DT92-2125"},
+ {id:6, ic:"🔋", name:"Battery Health Tester (iOS/Android)", cat:"Testing & Measurement", price:15000, sup:"degen", grade:"Original", code:"TT-BATT-2382"},
+ {id:7, ic:"🖥️", name:"LCD Screen Separator Machine", cat:"Soldering & Rework", price:38000, sup:"ogudu", grade:"Original", code:"TT-LCDS-2334"},
+ {id:8, ic:"💡", name:"UV Curing Lamp (LOCA glue)", cat:"Consumables", price:11500, sup:"nhora", grade:"OEM", code:"TT-UVLC-2381"},
+ {id:9, ic:"🩹", name:"B-7000 Adhesive 50ml", cat:"Consumables", price:3800, sup:"nhora", grade:"OEM", code:"TT-B7K0-2081"},
+ {id:10,ic:"🧴", name:"Isopropyl Alcohol 99% (1L)", cat:"Consumables", price:5500, sup:"degen", grade:"OEM", code:"TT-IPA9-2206"},
+ {id:11,ic:"🤏", name:"ESD Tweezers Set (6 pcs)", cat:"Opening & Precision", price:6900, sup:"nhora", grade:"OEM", code:"TT-TWZR-2542"},
+ {id:12,ic:"🛠️", name:"Spudger & Opening Picks (10 pcs)", cat:"Opening & Precision", price:4200, sup:"ogudu", grade:"OEM", code:"TT-SPDG-2335"},
+ {id:13,ic:"🔌", name:"DC Bench Power Supply 30V/10A", cat:"Testing & Measurement", price:32000, sup:"degen", grade:"Original", code:"TT-DCPS-2370"},
+ {id:14,ic:"🔎", name:"USB Amp/Volt Meter Tester", cat:"Testing & Measurement", price:5000, sup:"ogudu", grade:"OEM", code:"TT-USBT-2421"},
+ {id:15,ic:"🧲", name:"Magnetic Project Mat (screw keeper)", cat:"Opening & Precision", price:8500, sup:"nhora", grade:"OEM", code:"TT-MAGM-2308"},
+ {id:16,ic:"🌀", name:"Desoldering Pump + Braid Kit", cat:"Soldering & Rework", price:7800, sup:"degen", grade:"OEM", code:"TT-DESO-2369"},
+ {id:17,ic:"❄️", name:"Thermal Paste 20g (high-grade)", cat:"Consumables", price:4500, sup:"nhora", grade:"Original", code:"TT-THRM-2412"},
+ {id:18,ic:"🌊", name:"Ultrasonic Cleaner 0.8L (board wash)", cat:"Soldering & Rework", price:52000, sup:"ogudu", grade:"Original", code:"TT-ULTR-2471"}
+];
+
+const SEED_REPORTS = [
+ {supplier:"Unnamed street vendor (no shop)", item:"'Original' OLED screen — Grade C copy sold as OEM", when:"2 days ago"},
+ {supplier:"Stall B12, Ogunlana St", item:"Fake Yihua soldering iron with copied branding", when:"5 days ago"}
+];
+
+const WHATSAPP_NUMBER = "2347072652512"; // ← replace with the pilot supplier's real WhatsApp Business number
+
+/* ============ HELPERS ============ */
+const fmt = n => "₦" + n.toLocaleString("en-NG");
+const $ = id => document.getElementById(id);
+function toast(msg){ const t=$("toast"); t.textContent=msg; t.style.display="block"; setTimeout(()=>t.style.display="none",2200); }
+function go(page){
+  document.querySelectorAll(".page").forEach(p=>p.classList.remove("active"));
+  $("page-"+page).classList.add("active");
+  document.querySelectorAll("nav button").forEach(b=>b.classList.toggle("on", b.dataset.p===page));
+  window.scrollTo(0,0);
+  if(page==="cart") renderCart();
+  if(page==="requests") renderRequests();
+}
+
+/* ============ CATALOG ============ */
+let activeCat = "All";
+const CATS = ["All", ...new Set(PRODUCTS.map(p=>p.cat))];
+function renderChips(){
+  $("chips").innerHTML = CATS.map(c=>`<button class="chip ${c===activeCat?'on':''}" onclick="setCat('${c}')">${c}</button>`).join("");
+}
+function setCat(c){ activeCat=c; renderChips(); renderCatalog(); }
+function renderCatalog(){
+  const q = $("search").value.toLowerCase();
+  const list = PRODUCTS.filter(p => (activeCat==="All"||p.cat===activeCat) && p.name.toLowerCase().includes(q));
+  $("catalogList").innerHTML = list.length ? list.map(p=>{
+    const s = SUPPLIERS[p.sup];
+    return `<div class="tool">
+      <div class="ic">${p.ic}</div>
+      <div class="info">
+        <b>${p.name}</b>
+        <small>${s.name} · ⭐${s.trust} · <span class="verified-check">✓ ${p.grade} · ${p.code}</span></small>
+        <span class="price">${fmt(p.price)}</span>
+      </div>
+      <button class="btn" onclick="addToCart(${p.id})">+ Add</button>
+    </div>`;
+  }).join("") : `<div class="empty">No tools match your search.</div>`;
+}
+
+/* ============ CART ============ */
+let cart = JSON.parse(localStorage.getItem("tt_cart")||"[]");
+function saveCart(){ localStorage.setItem("tt_cart", JSON.stringify(cart)); updateCartCount(); }
+function updateCartCount(){ $("cartCount").textContent = cart.reduce((a,i)=>a+i.qty,0); }
+function addToCart(id){
+  const it = cart.find(i=>i.id===id);
+  if(it) it.qty++; else cart.push({id, qty:1});
+  saveCart();
+  const p = PRODUCTS.find(x=>x.id===id);
+  toast(p.ic+" "+p.name.split(" ").slice(0,3).join(" ")+" added");
+}
+function changeQty(id,d){
+  const it = cart.find(i=>i.id===id); if(!it) return;
+  it.qty += d; if(it.qty<=0) cart = cart.filter(i=>i.id!==id);
+  saveCart(); renderCart();
+}
+function renderCart(){
+  if(!cart.length){ $("cartItems").innerHTML = `<div class="empty">Your basket is empty.<br>Tap + Add on any tool to start a restock request.</div>`; $("cartTotal").textContent="₦0"; return; }
+  $("cartItems").innerHTML = cart.map(i=>{
+    const p = PRODUCTS.find(x=>x.id===i.id);
+    return `<div class="cart-item"><span>${p.ic} ${p.name}</span>
+      <span class="qty"><button onclick="changeQty(${i.id},-1)">−</button><b>${i.qty}</b><button onclick="changeQty(${i.id},1)">+</button></span>
+      <span class="price">${fmt(p.price*i.qty)}</span></div>`;
+  }).join("");
+  $("cartTotal").textContent = fmt(cart.reduce((a,i)=>a + PRODUCTS.find(x=>x.id===i.id).price*i.qty, 0));
+}
+function sendWhatsApp(){
+  if(!cart.length){ toast("Add tools to your basket first"); return; }
+  const name = $("techName").value.trim() || "A Computer Village technician";
+  const lines = cart.map(i=>{ const p=PRODUCTS.find(x=>x.id===i.id); return `• ${i.qty}× ${p.name} — ${fmt(p.price*i.qty)} (${p.code})`; });
+  const total = fmt(cart.reduce((a,i)=>a+PRODUCTS.find(x=>x.id===i.id).price*i.qty,0));
+  const msg = `Hello ToolTrust supplier 👋%0A%0AI'm ${encodeURIComponent(name)}.%0AI'd like to order:%0A${encodeURIComponent(lines.join("\n"))}%0A%0ATotal estimate: ${encodeURIComponent(total)}%0APlease confirm availability and final price.`;
+  // save request
+  const reqs = JSON.parse(localStorage.getItem("tt_reqs")||"[]");
+  reqs.unshift({when:new Date().toLocaleString(), items:cart.map(i=>{const p=PRODUCTS.find(x=>x.id===i.id);return `${i.qty}× ${p.name}`}), total, status:"Sent via WhatsApp — awaiting supplier confirmation"});
+  localStorage.setItem("tt_reqs", JSON.stringify(reqs));
+  window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${msg}`, "_blank");
+  cart = []; saveCart(); renderCart();
+  toast("Order opened in WhatsApp 📲");
+  setTimeout(()=>go("requests"), 600);
+}
+function renderRequests(){
+  const reqs = JSON.parse(localStorage.getItem("tt_reqs")||"[]");
+  $("reqList").innerHTML = reqs.length ? reqs.map(r=>`<div class="req"><b>${r.when}</b><small>${r.items.join(" · ")}</small><small><b style="color:var(--green)">${r.total}</b> — ${r.status}</small></div>`).join("") : `<div class="empty">No requests yet. Place your first restock order from the Tools tab.</div>`;
+}
+
+/* ============ VERIFY ============ */
+/* Deterministic batch-code scheme:
+   code = "TT-" + tag + "-" + checksum, checksum = (weighted char sum of tag) % 9000 + 1000 */
+function checksum(tag){
+  let s=0; for(let i=0;i<tag.length;i++) s += (i+3)*tag.charCodeAt(i);
+  return (s % 9000) + 1000;
+}
+const REGISTRY = {};
+PRODUCTS.forEach(p=>{
+  const tag = p.code.split("-")[1];
+  REGISTRY[p.code] = {product:p.name, supplier:SUPPLIERS[p.sup].name, price:p.price, grade:p.grade, ok:true};
+});
+function verifyCode(){
+  const raw = $("vcode").value.trim().toUpperCase();
+  const box = $("vResult");
+  box.className = "verify-result";
+  if(!raw){ box.className="verify-result bad"; box.innerHTML="<b>⚠️ Enter a batch code first.</b>"; return; }
+  const m = raw.match(/^TT-([A-Z0-9]{3,6})-(\d{4})$/);
+  if(m && parseInt(m[2]) !== checksum(m[1])){
+    box.className="verify-result bad";
+    box.innerHTML=`<b>❌ ${raw} — INVALID code.</b><p style="margin-top:4px">The checksum doesn't match. This code was likely printed by a counterfeiter. Do <b>not</b> buy.</p>`;
+    return;
+  }
+  const rec = REGISTRY[raw];
+  if(rec){
+    box.className="verify-result ok";
+    box.innerHTML=`<b>✅ ${raw} — GENUINE · ${rec.grade}</b><p style="margin-top:4px"><b style="color:#fff">${rec.product}</b><br>Supplier: ${rec.supplier}<br>Reference price: ${fmt(rec.price)}</p>`;
+  } else {
+    box.className="verify-result bad";
+    box.innerHTML=`<b>❌ ${raw} — NOT IN REGISTRY.</b><p style="margin-top:4px">No supplier in the ToolTrust network issued this code. Treat as high risk and report it on the Report tab.</p>`;
+  }
+}
+
+/* ============ REPORTS ============ */
+let reports = JSON.parse(localStorage.getItem("tt_reports")||"null") || SEED_REPORTS.slice();
+function renderReports(){
+  $("flagCount").textContent = reports.length + " report" + (reports.length>1?"s":"");
+  $("reportList").innerHTML = reports.map(r=>`<div class="req"><b>${r.supplier}</b><small>${r.item}</small><small>🕒 ${r.when}</small></div>`).join("");
+  $("supplierList").innerHTML = Object.values(SUPPLIERS).map(s=>`<div class="req"><div class="row-between"><b>${s.name}</b><span class="badge b-green">✓ Verified</span></div><small>${s.loc} · Trust ⭐ ${s.trust}</small></div>`).join("");
+}
+function submitReport(){
+  const s=$("rSupplier").value.trim(), i=$("rItem").value.trim();
+  if(!s||!i){ toast("Fill in both fields"); return; }
+  reports.unshift({supplier:s, item:i, when:"Just now"});
+  localStorage.setItem("tt_reports", JSON.stringify(reports));
+  $("rSupplier").value=""; $("rItem").value="";
+  $("reportThanks").style.display="block";
+  renderReports(); toast("Report submitted 🚩");
+}
+
+/* ============ INIT ============ */
+renderChips(); renderCatalog(); updateCartCount(); renderReports();
+</script>
+
+
+</body></html>

@@ -1,0 +1,21 @@
+TRIMMED 'ABOUT THE PROJECT' — Devpost description field (paste-ready, ~1,700 chars)
+
+Fake tools are eating technicians' money in West Africa's largest tech market. Reporting suggests up to 40% of tech gadgets in Nigeria may be counterfeit (TechCabal, 2025), counterfeiting in Computer Village grew ~50% in three years (The Guardian, 2017), and market guides document identical gadgets varying 30-40% in price between streets (Simplvest, 2025). When we interviewed technicians on Ola-Ayeni street, Ikeja, three voices kept returning: fake screwdriver tips that rounded off in a week, a "₦40,000 original" rework station selling for ₦55,000 two streets away, and customers lost when tools fail mid-repair.
+
+ROOT PROBLEM (not symptom): the market has no trusted, low-effort way to verify authenticity before payment or compare prices across sellers. Trust is purely personal ("my guy") — so fakes thrive and restocking burns 2-4 hours walking stalls.
+
+ToolTrust is a mobile web app built WITH and FOR these technicians:
+- VERIFIED CATALOG — genuine/OEM-graded tools from vetted suppliers with transparent naira prices (solves price opacity)
+- AUTHENTICITY CHECKER — deterministic batch-code scheme (TT-TAG-CHK): checksum + supplier registry gives genuine / invalid / not-in-registry in under 30 seconds (solves the verification gap)
+- WHATSAPP ORDERING — basket becomes a pre-filled WhatsApp message to the supplier, then saves under "My requests" (cuts restocking to under 5 minutes)
+- COMMUNITY REPORTS — flag counterfeit stalls; suppliers risk losing their verified badge
+
+HOW WE BUILT IT: single-file vanilla HTML/CSS/JS — GitHub Pages deploy, offline-capable, ~26KB, runs on any low-end Android. Verification fails closed: unknown codes are flagged, never guessed. Cart, orders and reports persist in localStorage — no accounts, no server. We rejected "AI authenticity detection" as unverifiable theater and shipped an auditable scheme instead.
+
+CHALLENGES: keeping every interaction under 3 taps for low-literacy users; designing an honesty-first checker that can't be gamed into false positives.
+
+WHAT WE LEARNED: empathy-first design changes the product. Our first instinct was a payments marketplace; listening showed the real pains were verification, price transparency and time — and that WhatsApp is the only rail this market needs.
+
+WHAT'S NEXT: pilot with 3 real Ikeja suppliers, signed QR batch codes, Paystack escrow with technician credit scoring, expansion to Onitsha and Abuja markets, Pidgin/Yoruba voice support.
+
+Demo codes: genuine TT-38IN-2210 / fake TT-38IN-9999.
